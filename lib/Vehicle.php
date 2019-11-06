@@ -97,6 +97,28 @@
                 return $results;
             }
 
+            public function getVehicleDetail($type) {
+                $this->db->query("SELECT * FROM VehicleType
+                WHERE vtname = :type");
+
+                $this->db->bind(':type', $type);
+
+                //assign single row
+                $row = $this->db->single();
+                return $row;
+            }
+
+            public function getAllVehicles($type) {
+                $this->db->query("SELECT * FROM Vehicle
+                WHERE vtname = :type");
+
+                $this->db->bind(':type', $type);
+
+                //assign single row
+                $results = $this->db->resultSet();
+                return $results;
+            }
+
 
             //------------------------------------------------------------------------------
 

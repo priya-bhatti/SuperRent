@@ -4,9 +4,22 @@ $vehicle = new Vehicle;
 
 $template = new Template('templates/vehicle-detail.php');
 
-$vehicle_id = isset($_GET['vtname']) ? $_GET['vtname'] : null;
+$type = isset($_GET['vtname']) ? $_GET['vtname'] : null;
+$loc = isset($_GET['location']) ? $_GET['location'] : null;
+$city = isset($_GET['city']) ? $_GET['city'] : null;
+$fd = isset($_GET['fromdate']) ? $_GET['fromdate'] : null;
+$ft = isset($_GET['fromtime']) ? $_GET['fromtime'] : null;
+$td = isset($_GET['todate']) ? $_GET['todate'] : null;
+$tt = isset($_GET['totime']) ? $_GET['totime'] : null;
 
-//$template->vehicle = $vehicle->getVehicle($vehicle_id);
-//$template->vehicles = $vehicle->getAllVehicles();
+if($type && $loc && $city && $fd && $ft && $td && $tt) {
+    $can_reserve = true;
+} else {
+    $can_reserve = false;
+}
+
+$template->can_reserve = $can_reserve;
+$template->vehicle = $vehicle->getVehicleDetail($type);
+$template->vehicles = $vehicle->getAllVehicles($type);
 
 echo $template;

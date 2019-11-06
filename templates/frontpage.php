@@ -83,7 +83,7 @@
       <div class="col-md-10">
         <h2><?php echo $vehicle->vtname; ?></h2>
         <h3><?php echo $vehicle->available. ' '. $vehicle->vtname. '\'s Fit Your Criteria'; ?> </h3>
-        <p><a class="btn btn-outline-success" href="vehicle.php?vtname=<?php echo $vehicle->vtname; ?>" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-outline-success" href="vehicle.php?<?php echo $url; ?>" role="button">View details &raquo;</a></p>
       </div>
     </div>
     <hr>
