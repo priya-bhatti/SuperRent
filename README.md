@@ -1,5 +1,7 @@
 # 304 Project - SuperRent
 hosted with Heroku (using postgres) https://safe-oasis-12638.herokuapp.com/index.php  
+**Please use the link to access the application, no need to compile code.**  
+If you really want to compile on your machine the database connection is already set up to access the heroku postgres db but for some reason it does not connect if the site is not hosted as well.
 ## Customer Transactions
 For the Reserve option to be available all of Vehicle Type, Location, and Branch must be selected (You will see a message indicating this if you have not choses all options)  
 When entering a new customer **remember the dlicense you enter**
