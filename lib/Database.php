@@ -3,6 +3,7 @@
     private $user = DB_USER;
     private $pass = DB_PASSWORD;
     private $dbname = DB_NAME;
+    private $port = DB_PORT;
 
     private $dbh;
     private $error;
@@ -10,8 +11,8 @@
 
     //Constructor
     public function __construct(){
-        $dsn = 'mysql:host='. $this->host .';dbname='. $this->dbname;
-        //$dsn = 'oci:dbname='. $this->host;
+        $dsn = 'pgsql:host='. $this->host .';port='. $this->port .';dbname='. $this->dbname;
+        //$dsn = 'mysql:host='. $this->host .';dbname='. $this->dbname;
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
