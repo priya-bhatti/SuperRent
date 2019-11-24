@@ -14,11 +14,13 @@ $tt = isset($_GET['totime']) ? $_GET['totime'] : null;
 
 if($type && $loc && $city && $fd && $ft && $td && $tt) {
     $can_reserve = true;
+    $url = "vtname=".$type."&location=".$loc."&city=".$city."&fromdate=".$fd."&fromtime=".$ft."&todate=".$td."&totime=".$tt;
 } else {
     $can_reserve = false;
 }
 
 $template->can_reserve = $can_reserve;
+$template->url = $url;
 $template->vehicle = $vehicle->getVehicleDetail($type);
 $template->vehicles = $vehicle->getAllVehicles($type);
 
