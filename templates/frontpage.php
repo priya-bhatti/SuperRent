@@ -26,7 +26,7 @@
             <label>PICK-UP </label>
             <div class="form-row">
               <div class="col-md-6">
-                <input type="text" class="form-control" name="fromdate" placeholder="YYYY-MON-DD">
+                <input type="text" class="form-control" name="fromdate" placeholder="YYYY-MM-DD">
               </div>
               <div class="col-md-6">
                 <select name="fromtime" class="form-control">
@@ -51,7 +51,7 @@
             <label>RETURN </label>
             <div class="form-row">
               <div class="col-md-6">
-                <input type="text" class="form-control" name="todate" placeholder="YYYY-MON-DD">
+                <input type="text" class="form-control" name="todate" placeholder="YYYY-MM-DD">
               </div>
               <div class="col-md-6">
               <select name="totime" class="form-control">
@@ -82,8 +82,8 @@
     <div class="row">
       <div class="col-md-10">
         <h2><?php echo $vehicle->vtname; ?></h2>
-        <h3><?php echo $vehicle->available. ' '. $vehicle->vtname. '\'s Fit Your Criteria'; ?> </h3>
-        <p><a class="btn btn-outline-success" href="vehicle.php?<?php echo $url; ?>" role="button">View details &raquo;</a></p>
+        <h3><?php echo $vehicle->available. ' '. $vehicle->vtname. ' Fit Your Criteria'; ?> </h3>
+        <p><a class="btn btn-outline-success" href="vehicle.php?vtname=<?php echo $vehicle->vtname.$url; ?>" role="button">View details &raquo;</a></p>
       </div>
     </div>
     <hr>
