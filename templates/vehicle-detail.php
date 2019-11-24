@@ -16,7 +16,7 @@
     <div class="well" style="margin-top:20px;">
         <?php if ($can_reserve): ?>
             <!-- TODO FIX URL -->
-            <a href="reserve.php?id=<?php echo $vehicle->vlicense; ?>" class="btn btn-success">RESERVE</a>
+            <a href="reserve.php?<?php echo $url; ?>" class="btn btn-success">RESERVE</a>
         <?php else: ?>
             <p class="bg-warning text-white">Must Enter Vehicle Type, Location, And a Time Interval to Reserve</p>
         <?php endif; ?>
